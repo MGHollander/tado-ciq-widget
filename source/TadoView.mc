@@ -1,6 +1,6 @@
 using Toybox.WatchUi;
 
-class tadociqwidgetView extends WatchUi.View {
+class TadoView extends WatchUi.View {
 
     function initialize() {
         View.initialize();

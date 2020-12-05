@@ -1,6 +1,6 @@
 using Toybox.Application;
 
-class tadociqwidgetApp extends Application.AppBase {
+class TadoApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
@@ -16,7 +16,6 @@ class tadociqwidgetApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
-        return [ new tadociqwidgetView() ];
+        return [ new TadoView() ];
     }
-
 }
