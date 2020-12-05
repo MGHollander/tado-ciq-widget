@@ -16,6 +16,10 @@ class TadoApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
-        return [ new TadoView() ];
+        if(!System.getDeviceSettings().phoneConnected) {
+            return [ new ConnectToGarminConnectAppView() ];
+        } else {
+            return [ new TadoView() ];
+        }
     }
 }

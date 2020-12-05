@@ -1,3 +1,7 @@
 <strings>
     <string id="AppName">tado° CIQ widget</string>
+    
+    <string id="ConnectString1">Please connect</string>
+    <string id="ConnectString2">your phone to the</string>
+    <string id="ConnectString3">Garmin Connect app</string>
 </strings>
