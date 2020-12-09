@@ -1,7 +1,14 @@
 <strings>
-    <string id="AppName">tado° CIQ widget</string>
-    
-    <string id="ConnectString1">Please connect</string>
-    <string id="ConnectString2">your phone to the</string>
-    <string id="ConnectString3">Garmin Connect app</string>
+  <string id="AppName">tado° CIQ widget</string>
+
+  <string id="ConnectString1">Please connect</string>
+  <string id="ConnectString2">your phone to the</string>
+  <string id="ConnectString3">Garmin Connect app</string>
+
+  <string id="GoToPhoneString1">Open the</string>
+  <string id="GoToPhoneString2">Garmin Connect app</string>
+
+  <string id="Error">Error: </string>
+  
+  <string id="ChooseHome">Choose a home</string>
 </strings>

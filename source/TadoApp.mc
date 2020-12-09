@@ -1,6 +1,10 @@
-using Toybox.Application;
+using Toybox.Application as App;
 
-class TadoApp extends Application.AppBase {
+//const ApiBaseUrl = "https://tado-ciq-bridge.valet";
+const ApiBaseUrl = "https://44ff0e4c37ec.ngrok.io";
+const ApiUrl = ApiBaseUrl + "/api";
+
+class TadoApp extends App.AppBase {
 
     function initialize() {
         AppBase.initialize();
@@ -16,8 +20,12 @@ class TadoApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
+        var apiToken = getProperty("api_token");
+
         if(!System.getDeviceSettings().phoneConnected) {
             return [ new ConnectToGarminConnectAppView() ];
+        } else if ( apiToken == null ) {
+            return [ new LoginView(), new LoginDelegate() ];
         } else {
             return [ new TadoView() ];
         }

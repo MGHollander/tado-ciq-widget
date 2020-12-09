@@ -17,4 +17,22 @@
     <label x="center" y="125" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.ConnectString2" />
     <label x="center" y="150" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.ConnectString3" />
   </layout>
+  
+  <layout id="LoginLayout">
+    <bitmap id="gcm" filename="../images/gcm.png" x="center" y="25" dithering="none" >
+      <palette>
+        <color>000000</color>
+          <color>555555</color>
+          <color>AAAAAA</color>
+          <color>00AAFF</color>
+      </palette>
+    </bitmap>
+    
+    <label x="center" y="100" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.GoToPhoneString1" />
+    <label x="center" y="125" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.GoToPhoneString2" />
+  </layout>
+  
+  <layout id="ErrorLayout">
+    <label id="Message" x="center" y="center" justification="Gfx.TEXT_JUSTIFY_CENTER" color="FFFFFF"/>
+  </layout>
 </layouts>
