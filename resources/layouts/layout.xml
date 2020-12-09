@@ -1,6 +1,7 @@
 <layouts>
   <layout id="MainLayout">
-    <bitmap id="id_monkey" x="center" y="center" filename="../drawables/monkey.png" />
+    <drawable id="TadoHeader" />
+    <label x="center" y="center" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.Loading" />
   </layout>
 
   <layout id="Gcm">

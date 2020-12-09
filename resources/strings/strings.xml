@@ -8,7 +8,7 @@
   <string id="GoToPhoneString1">Open the</string>
   <string id="GoToPhoneString2">Garmin Connect app</string>
 
-  <string id="Error">Error: </string>
-  
   <string id="ChooseHome">Choose a home</string>
+  <string id="Error">Error: </string>
+  <string id="Loading">loading...</string>
 </strings>
