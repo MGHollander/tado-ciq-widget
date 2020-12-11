@@ -5,8 +5,12 @@ A Garmin Connect IQ widget for your tado° smart thermostat.
 
 ## Todo
 
+- Move the app code into a separate dir and move unused images from the app dir to a separate dir.
+- Check if all webrequests use the TadoTransaction.
+- Display all zones in the main layout
+- Fix the build warning "BUILD: WARNING: This is a 'widget' app type but no source code was annotated with (:glance). The entire application will be loaded as a glance process. (glance application)"
+- ~Make an API call to get all zones at once~
 - ~Clean out most of the code copied from the Strava API widget and start at the beginning for the tado widget (no code that is not needed yet).~
-- Make an API call to get all zones at once
 
 ## Todo before deployment
 
