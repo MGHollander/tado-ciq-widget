@@ -32,14 +32,14 @@ class LoginTransaction
     // Method to kick off tranaction
     function go() {
         System.println("LoginTransaction.mc LoginTransaction::go");
-        System.println($.ApiBaseUrl + "/login");
+        System.println($.BaseUrl + "/login");
 
         // Kick of a request for the user's credentials. This will
         // cause a notification from Connect Mobile to file
         Comm.makeOAuthRequest(
-            $.ApiBaseUrl + "/login",
+            $.BaseUrl + "/login",
             {},
-            $.ApiBaseUrl + "/login/callback",
+            $.BaseUrl + "/login/callback",
             Comm.OAUTH_RESULT_TYPE_URL,
             {"api_token"=>"api_token"}
         );
