@@ -1,7 +1,6 @@
 using Toybox.Application as App;
 
-//const BaseUrl = "https://tado-ciq-bridge.valet";
-const BaseUrl = "https://04d8b0081dc0.ngrok.io";
+const BaseUrl = "https://tado-ciq-bridge.sharedwithexpose.com";
 const ApiUrl = BaseUrl + "/api";
 
 class TadoApp extends App.AppBase
