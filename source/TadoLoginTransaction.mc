@@ -8,7 +8,8 @@ using Toybox.WatchUi;
 class LoginTransaction
 {
     // Constructor
-    function initialize() {
+    function initialize()
+    {
         // Register a callback to handle a response from the
         // OAUTH request. If there is a response waiting this
         // will fire right away
@@ -17,7 +18,8 @@ class LoginTransaction
 
     // Handle converting the authorization code to the access token
     // @param value Content of JSON response
-    function accessCodeResult(value) {
+    function accessCodeResult(value)
+    {
         System.println("LoginTransaction.mc LoginTransaction::accessCodeResult");
         System.println("value = " + value);
 
@@ -30,7 +32,8 @@ class LoginTransaction
     }
 
     // Method to kick off tranaction
-    function go() {
+    function go()
+    {
         System.println("LoginTransaction.mc LoginTransaction::go");
         System.println($.BaseUrl + "/login");
 
@@ -46,7 +49,8 @@ class LoginTransaction
     }
 
     // Handle a successful response from the server
-    function handleResponse(data) {
+    function handleResponse(data)
+    {
         System.println("LoginTransaction.mc LoginTransaction::handleResponse");
         System.println("Data: " + data);
 
@@ -60,7 +64,8 @@ class LoginTransaction
     }
 
     // Handle a error from the server
-    function handleError(code) {
+    function handleError(code)
+    {
         System.println("LoginTransaction.mc LoginTransaction::handleError");
 
         var msg = WatchUi.loadResource( Rez.Strings.Error );

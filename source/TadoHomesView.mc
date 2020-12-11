@@ -3,25 +3,28 @@ using Toybox.Communications as Comm;
 using Toybox.System;
 using Toybox.WatchUi;
 
-class TadoHomesView extends WatchUi.View {
-
+class TadoHomesView extends WatchUi.View
+{
     hidden var _menuDelegate;
 
-    function initialize() {
+    function initialize()
+    {
         View.initialize();
 
         _menuDelegate = new TadoHomesMenuDelegate();
     }
 
     // Load your resources here
-    function onLayout(dc) {
+    function onLayout(dc)
+    {
         setLayout(Rez.Layouts.MainLayout(dc));
     }
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
-    function onShow() {
+    function onShow()
+    {
         System.println("TadoHomesView.mc TadoHomesView::onShow");
 
         var homeId = App.getApp().getProperty("home_id");
@@ -32,7 +35,8 @@ class TadoHomesView extends WatchUi.View {
     }
 
     // Update the view
-    function onUpdate(dc) {
+    function onUpdate(dc)
+    {
         System.println("TadoHomesView.mc TadoHomesView::onUpdate");
 
         // Call the parent onUpdate function to redraw the layout
@@ -42,10 +46,12 @@ class TadoHomesView extends WatchUi.View {
     // Called when this View is removed from the screen. Save the
     // state of this View here. This includes freeing resources from
     // memory.
-    function onHide() {
+    function onHide()
+    {
     }
 
-    function selectHome(homes) {
+    function selectHome(homes)
+    {
         System.println("TadoHomesView.mc TadoHomesView::selectHome");
         System.println(homes);
 
@@ -72,7 +78,8 @@ class TadoHomesView extends WatchUi.View {
     }
 
    // set up the response callback function
-   function onReceive(responseCode, data) {
+   function onReceive(responseCode, data)
+   {
         System.println("TadoHomesView.mc TadoHomesView::onReceive");
 
         if (responseCode == 200) {
@@ -87,7 +94,8 @@ class TadoHomesView extends WatchUi.View {
         }
     }
 
-    function makeRequest() {
+    function makeRequest()
+    {
         var apiToken = App.getApp().getProperty("api_token");
         System.println("TadoHomesView.mc TadoHomesView::makeRequest");
 

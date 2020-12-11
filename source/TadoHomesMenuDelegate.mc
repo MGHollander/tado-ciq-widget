@@ -2,13 +2,15 @@ using Toybox.Application as App;
 using Toybox.System;
 using Toybox.WatchUi;
 
-class TadoHomesMenuDelegate extends WatchUi.Menu2InputDelegate {
-
-    function initialize() {
+class TadoHomesMenuDelegate extends WatchUi.Menu2InputDelegate
+{
+    function initialize()
+    {
         Menu2InputDelegate.initialize();
     }
 
-    function onSelect(item) {
+    function onSelect(item)
+    {
         var id = item.getId();
 
         System.println("TadoHomesDelegate.mc TadoHomesDelegate::onSelect");
@@ -18,11 +20,13 @@ class TadoHomesMenuDelegate extends WatchUi.Menu2InputDelegate {
     }
 
     // Block the back button handling
-    function onBack() {
+    function onBack()
+    {
         System.println("TadoHomesDelegate.mc TadoHomesDelegate::onBack");
     }
 
-    function selectHome(id) {
+    function selectHome(id)
+    {
         System.println("TadoHomesDelegate.mc TadoHomesDelegate::onSelect");
         App.getApp().setProperty("home_id", id);
 

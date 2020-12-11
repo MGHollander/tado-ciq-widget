@@ -2,13 +2,16 @@ using Toybox.WatchUi;
 
 
 // View to handle showing the Connect to GCM message
-class ConnectToGarminConnectAppView extends WatchUi.View {
+class ConnectToGarminConnectAppView extends WatchUi.View
+{
 
-    function initialize() {
+    function initialize()
+    {
         View.initialize();
     }
 
-    function onLayout(dc) {
+    function onLayout(dc)
+    {
         setLayout(Rez.Layouts.Gcm(dc));
     }
 
