@@ -2,7 +2,7 @@ using Toybox.Application as App;
 using Toybox.System;
 using Toybox.WatchUi;
 
-class TadoHomesDelegate extends WatchUi.Menu2InputDelegate {
+class TadoHomesMenuDelegate extends WatchUi.Menu2InputDelegate {
 
     function initialize() {
         Menu2InputDelegate.initialize();

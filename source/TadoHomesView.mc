@@ -5,12 +5,12 @@ using Toybox.WatchUi;
 
 class TadoHomesView extends WatchUi.View {
 
-    hidden var _delegate;
+    hidden var _menuDelegate;
 
     function initialize() {
         View.initialize();
 
-        _delegate = new TadoHomesDelegate();
+        _menuDelegate = new TadoHomesMenuDelegate();
     }
 
     // Load your resources here
@@ -50,7 +50,7 @@ class TadoHomesView extends WatchUi.View {
         System.println(homes);
 
         if (homes.size() == 1) {
-            _delegate.selectHome(homes[0]["id"]);
+            _menuDelegate.selectHome(homes[0]["id"]);
         }
 
         var menu = new WatchUi.Menu2(null);
@@ -68,7 +68,7 @@ class TadoHomesView extends WatchUi.View {
             );
         }
 
-        WatchUi.pushView(menu, _delegate, WatchUi.SLIDE_DOWN);
+        WatchUi.pushView(menu, _menuDelegate, WatchUi.SLIDE_DOWN);
     }
 
    // set up the response callback function
