@@ -1,3 +1,9 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="../images/tado_logo_square_color_40x40.png" />
+    
+    <!-- https://www.iconfinder.com/icons/2682839/drop_forecast_humidity_precipitation_rain_weather_icon -->
+    <bitmap id="IconHumidity" filename="../images/icon_humidity_24x24.png" />
+    
+    <!-- https://www.iconfinder.com/icons/198554/cold_grey_hot_teperature_thermometer_weather_icon -->
+    <bitmap id="IconTemperature" filename="../images/icon_temperature_24x24.png" />
 </drawables>
