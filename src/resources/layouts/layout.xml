@@ -1,6 +1,7 @@
 <layouts>
   <layout id="MainLayout">
     <drawable id="TadoHeader" />
+    
     <label id="MainLayoutLoading" x="center" y="center" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.Loading" />
     <label id="MainLayoutMore1" x="center" y="190" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
     <label id="MainLayoutMore2" x="center" y="210" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
