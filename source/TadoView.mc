@@ -59,11 +59,12 @@ class TadoView extends WatchUi.View
         var homeId = App.getApp().getProperty("home_id");
 
         if (homeId == null) {
-            WatchUi.pushView(new TadoHomesView(), null, WatchUi.SLIDE_DOWN);
+            WatchUi.pushView(new TadoHomesView(), null, WatchUi.SLIDE_IMMEDIATE);
         }
-
-        var transaction = new TadoZonesTransaction(self);
-        transaction.go();
+        else {
+            var transaction = new TadoZonesTransaction(self);
+            transaction.go();
+        }
     }
 
     function setZones(zones) {

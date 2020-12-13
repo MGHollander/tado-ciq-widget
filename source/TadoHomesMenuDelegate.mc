@@ -28,6 +28,7 @@ class TadoHomesMenuDelegate extends WatchUi.Menu2InputDelegate
     function selectHome(id)
     {
         System.println("TadoHomesDelegate.mc TadoHomesDelegate::onSelect");
+
         App.getApp().setProperty("home_id", id);
 
         WatchUi.popView(WatchUi.SLIDE_UP);

@@ -58,23 +58,24 @@ class TadoHomesView extends WatchUi.View
         if (homes.size() == 1) {
             _menuDelegate.selectHome(homes[0]["id"]);
         }
+        else {
+            var menu = new WatchUi.Menu2(null);
 
-        var menu = new WatchUi.Menu2(null);
+            menu.setTitle(Rez.Strings.ChooseHome);
 
-        menu.setTitle(Rez.Strings.ChooseHome);
+            for (var i = 0; i < homes.size(); i++) {
+                menu.addItem(
+                    new WatchUi.MenuItem(
+                        homes[i]["name"],
+                        null,
+                        homes[i]["id"],
+                        {}
+                    )
+                );
+            }
 
-        for (var i = 0; i < homes.size(); i++) {
-            menu.addItem(
-                new WatchUi.MenuItem(
-                    homes[i]["name"],
-                    null,
-                    homes[i]["id"],
-                    {}
-                )
-            );
+            WatchUi.switchToView(menu, _menuDelegate, WatchUi.SLIDE_DOWN);
         }
-
-        WatchUi.pushView(menu, _menuDelegate, WatchUi.SLIDE_DOWN);
     }
 
    // set up the response callback function
