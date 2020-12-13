@@ -2,8 +2,9 @@
 bin
 dist
 
-# Eclipse project file
+# Project file
 .project
+.settings
 
 # Log files
 logs
