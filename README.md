@@ -15,6 +15,8 @@ A Garmin Connect IQ widget for your tado° smart thermostat.
 - Use System.error() to report errors in the production app.
 - Replace the hidden access modifier for protected, since hidden is just a synonym..
 - Use the screen height to determine how many zones can be displayed on the screen.
+- Add unit tests (https://developer.garmin.com/connect-iq/core-topics/unit-testing/).
+- Add error reporting (https://developer.garmin.com/connect-iq/core-topics/exception-reporting-tool/).
 - ~Make an API call to get all zones at once.~
 - ~Clean out most of the code copied from the Strava API widget and start at the beginning for the tado widget (no code that is not needed yet).~
 
