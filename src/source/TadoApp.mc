@@ -26,11 +26,12 @@ class TadoApp extends App.AppBase
         var apiToken = getProperty("api_token");
 
         if(!System.getDeviceSettings().phoneConnected) {
-            return [ new ConnectToGarminConnectAppView() ];
+            return [ new ConnectToGmcView() ];
         } else if ( apiToken == null ) {
             return [ new LoginView(), new LoginDelegate() ];
         } else {
-            return [ new TadoView() ];
+            var view = new TadoMainView();
+            return [ view, new TadoMainBehaviorDelegate(view) ];
         }
     }
 }

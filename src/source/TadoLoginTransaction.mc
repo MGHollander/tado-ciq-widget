@@ -60,7 +60,8 @@ class LoginTransaction
         App.getApp().setProperty("api_token", data["api_token"]);
 
         // Switch to the data view
-        WatchUi.switchToView(new TadoView(), null, WatchUi.SLIDE_IMMEDIATE);
+        var view = new TadoMainView();
+        WatchUi.switchToView(view, new TadoMainBehaviorDelegate(view), WatchUi.SLIDE_IMMEDIATE);
     }
 
     // Handle a error from the server

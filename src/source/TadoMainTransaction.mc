@@ -2,7 +2,7 @@ using Toybox.Application as App;
 using Toybox.Communications as Comm;
 using Toybox.System;
 
-class TadoZonesTransaction extends TadoTransaction
+class TadoMainTransaction extends TadoTransaction
 {
     hidden var _view;
 
@@ -19,7 +19,7 @@ class TadoZonesTransaction extends TadoTransaction
     // Function to put response handling
     function handleResponse(data)
     {
-        System.println("TadoZonesTransaction.mc TadoZonesTransaction::handleResponse");
+        System.println("TadoMainTransaction::handleResponse");
         System.println("data = " + data);
 
         App.getApp().setProperty("zones", data);
@@ -31,7 +31,7 @@ class TadoZonesTransaction extends TadoTransaction
     // Function to put error handling
     function handleError(error)
     {
-        System.println("TadoZonesTransaction.mc TadoZonesTransaction::handleError");
+        System.println("TadoMainTransaction::handleError");
         System.println("error = " + error);
     }
 }

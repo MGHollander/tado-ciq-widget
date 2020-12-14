@@ -3,7 +3,7 @@ using Toybox.Communications as Comm;
 using Toybox.System;
 using Toybox.WatchUi;
 
-class TadoView extends WatchUi.View
+class TadoMainView extends WatchUi.View
 {
     const TEMPERATURE_CELSIUS = 0;
     const TEMPERATURE_FAHRENHEIT = 1;
@@ -54,7 +54,7 @@ class TadoView extends WatchUi.View
     // loading resources into memory.
     function onShow()
     {
-        System.println("TadoView.mc TadoView::onShow");
+        System.println("TadoMainView::onShow");
 
         var homeId = App.getApp().getProperty("home_id");
 
@@ -62,22 +62,30 @@ class TadoView extends WatchUi.View
             WatchUi.pushView(new TadoHomesView(), null, WatchUi.SLIDE_IMMEDIATE);
         }
         else {
-            var transaction = new TadoZonesTransaction(self);
+            var transaction = new TadoMainTransaction(self);
             transaction.go();
         }
     }
 
-    function setZones(zones) {
-        System.println("TadoView.mc TadoView::setZones");
+    function setZones(zones)
+    {
+        System.println("TadoMainView::setZones");
 
         _zones = zones;
 
         WatchUi.requestUpdate();
     }
 
+    function getZones()
+    {
+        System.println("TadoMainView::getZones");
+
+        return _zones;
+    }
+
     function onUpdate(dc)
     {
-        System.println("TadoView.mc TadoView::onUpdate");
+        System.println("TadoMainView::onUpdate");
 
         // We need to update the layout before we start to draw the zones.
         if (_zones) {

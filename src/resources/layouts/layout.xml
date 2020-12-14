@@ -25,4 +25,16 @@
   <layout id="ErrorLayout">
     <label id="Message" x="center" y="center" justification="Gfx.TEXT_JUSTIFY_CENTER" color="FFFFFF"/>
   </layout>
+  
+  <layout id="ZoneLayout">  
+    <drawable id="backgroundColorWhite" />
+    <drawable id="TadoHeader" />
+    
+    <bitmap id="IconArrowUp" x="center" y="top" filename="../images/icon_arrow_up_24x24.png" />
+    <bitmap id="IconArrowDown" x="center" y="bottom" filename="../images/icon_arrow_down_24x24.png" />
+    
+    <label id="ZoneName" x="center" y="25%" text="Zone name here :-D" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
+    <label id="ZoneTemprerature" x="center" y="35%" text="20°C / 21°C" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
+    
+  </layout>
 </layouts>
