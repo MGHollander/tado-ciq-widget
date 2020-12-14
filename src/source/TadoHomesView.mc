@@ -25,7 +25,7 @@ class TadoHomesView extends WatchUi.View
     // loading resources into memory.
     function onShow()
     {
-        System.println("TadoHomesView.mc TadoHomesView::onShow");
+        System.println("TadoHomesView::onShow");
 
         var homeId = App.getApp().getProperty("home_id");
 
@@ -37,7 +37,7 @@ class TadoHomesView extends WatchUi.View
     // Update the view
     function onUpdate(dc)
     {
-        System.println("TadoHomesView.mc TadoHomesView::onUpdate");
+        System.println("TadoHomesView::onUpdate");
 
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
@@ -52,7 +52,7 @@ class TadoHomesView extends WatchUi.View
 
     function selectHome(homes)
     {
-        System.println("TadoHomesView.mc TadoHomesView::selectHome");
+        System.println("TadoHomesView::selectHome");
         System.println(homes);
 
         if (homes.size() == 1) {
@@ -81,7 +81,7 @@ class TadoHomesView extends WatchUi.View
    // set up the response callback function
    function onReceive(responseCode, data)
    {
-        System.println("TadoHomesView.mc TadoHomesView::onReceive");
+        System.println("TadoHomesView::onReceive");
 
         if (responseCode == 200) {
             System.println("Request successful");
@@ -98,7 +98,7 @@ class TadoHomesView extends WatchUi.View
     function makeRequest()
     {
         var apiToken = App.getApp().getProperty("api_token");
-        System.println("TadoHomesView.mc TadoHomesView::makeRequest");
+        System.println("TadoHomesView::makeRequest");
 
         Comm.makeWebRequest(
             $.ApiUrl + "/me",

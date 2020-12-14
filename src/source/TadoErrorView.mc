@@ -19,7 +19,7 @@ class ErrorView extends WatchUi.View
         setLayout(Rez.Layouts.ErrorLayout(dc));
         var view = View.findDrawableById("Message");
 
-        System.println("TadoErrorView.mc ErrorView::onLayout");
+        System.println("ErrorView::onLayout");
         System.println(_message);
 
         view.setText(_message.toString());

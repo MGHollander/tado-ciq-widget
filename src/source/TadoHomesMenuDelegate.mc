@@ -13,7 +13,7 @@ class TadoHomesMenuDelegate extends WatchUi.Menu2InputDelegate
     {
         var id = item.getId();
 
-        System.println("TadoHomesDelegate.mc TadoHomesDelegate::onSelect");
+        System.println("TadoHomesMenuDelegate::onSelect");
         System.println("item.getId(): " + id);
 
         selectHome(id);
@@ -22,12 +22,12 @@ class TadoHomesMenuDelegate extends WatchUi.Menu2InputDelegate
     // Block the back button handling
     function onBack()
     {
-        System.println("TadoHomesDelegate.mc TadoHomesDelegate::onBack");
+        System.println("TadoHomesMenuDelegate::onBack");
     }
 
     function selectHome(id)
     {
-        System.println("TadoHomesDelegate.mc TadoHomesDelegate::onSelect");
+        System.println("TadoHomesMenuDelegate::onSelect");
 
         App.getApp().setProperty("home_id", id);
 

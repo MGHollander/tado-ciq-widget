@@ -20,7 +20,7 @@ class LoginTransaction
     // @param value Content of JSON response
     function accessCodeResult(value)
     {
-        System.println("LoginTransaction.mc LoginTransaction::accessCodeResult");
+        System.println("LoginTransaction::accessCodeResult");
         System.println("value = " + value);
 
         if (value.data != null) {
@@ -34,7 +34,7 @@ class LoginTransaction
     // Method to kick off tranaction
     function go()
     {
-        System.println("LoginTransaction.mc LoginTransaction::go");
+        System.println("LoginTransaction::go");
         System.println($.BaseUrl + "/login");
 
         // Kick of a request for the user's credentials. This will
@@ -51,8 +51,8 @@ class LoginTransaction
     // Handle a successful response from the server
     function handleResponse(data)
     {
-        System.println("LoginTransaction.mc LoginTransaction::handleResponse");
-        System.println("Data: " + data);
+        System.println("LoginTransaction::handleResponse");
+        System.println("data = " + data);
 
         // Store the api token in the properties
         // For app store apps the properties are encrypted using
@@ -67,7 +67,7 @@ class LoginTransaction
     // Handle a error from the server
     function handleError(code)
     {
-        System.println("LoginTransaction.mc LoginTransaction::handleError");
+        System.println("LoginTransaction::handleError");
 
         var msg = WatchUi.loadResource( Rez.Strings.Error );
         msg += code;

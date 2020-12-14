@@ -24,7 +24,7 @@ class LoginView extends WatchUi.View
     {
         View.initialize();
 
-        System.println("TadoLoginView.mc LoginView::initialize");
+        System.println("LoginView::initialize");
 
         _transaction = new LoginTransaction();
         _running = false;
@@ -39,7 +39,7 @@ class LoginView extends WatchUi.View
     // Handle becoming visible
     function onShow()
     {
-         System.println("TadoLoginView.mc LoginView::onShow");
+         System.println("LoginView::onShow");
 
         // onShow can be called multiple times, so make sure
         // we only start the transaction once

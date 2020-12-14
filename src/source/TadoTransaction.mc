@@ -16,7 +16,7 @@ class TadoTransaction
     function go()
     {
         var apiToken = App.getApp().getProperty("api_token");
-        System.println("TadoTransaction.mc TadoTransaction::go");
+        System.println("TadoTransaction::go");
         System.println("endpoint: " + $.ApiUrl + _endpoint + "?api_token=" + apiToken);
 
         Comm.makeWebRequest(
@@ -38,7 +38,7 @@ class TadoTransaction
    // set up the response callback function
    function onReceive(responseCode, data)
    {
-        System.println("TadoTransaction.mc TadoTransaction::onReceive");
+        System.println("TadoTransaction::onReceive");
 
         if (responseCode == 200) {
             System.println("Request successful");
@@ -64,14 +64,14 @@ class TadoTransaction
     // Function to put response handling
     function handleResponse(data)
     {
-        System.println("TadoTransaction.mc TadoTransaction::handleResponse");
+        System.println("TadoTransaction::handleResponse");
         System.println("data = " + data);
     }
 
     // Function to put error handling
     function handleAuthError(error)
     {
-        System.println("TadoTransaction.mc TadoTransaction::handleAuthError");
+        System.println("TadoTransaction::handleAuthError");
         System.println("error = " + error);
         System.println("api_token = " + App.getApp().getProperty("api_token"));
 
@@ -82,7 +82,7 @@ class TadoTransaction
     // Function to put error handling
     function handleError(error)
     {
-        System.println("TadoTransaction.mc TadoTransaction::handleError");
+        System.println("TadoTransaction::handleError");
         System.println("error = " + error);
     }
 }
