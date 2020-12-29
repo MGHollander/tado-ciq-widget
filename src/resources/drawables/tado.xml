@@ -1,6 +1,0 @@
-<drawables>
-  <drawable-list id="TadoHeader">
-    <shape type="rectangle" x="0" y="0" width="fill" height="65" color="Gfx.COLOR_WHITE" />
-    <bitmap id="TadoLogo" x="70" y="20" filename="../images/tado_logo_black_white_100x35.png" />
-  </drawable-list>
-</drawables>
