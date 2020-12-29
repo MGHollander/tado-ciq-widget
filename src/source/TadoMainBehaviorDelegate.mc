@@ -12,13 +12,16 @@ class TadoMainBehaviorDelegate extends WatchUi.BehaviorDelegate
         _view = view;
     }
 
-    // Detect Menu behavior
     function onSelect()
     {
         System.println("TadoMainBehaviorDelegate::onSelect");
 
-        WatchUi.switchToView(new TadoZoneView(), null, WatchUi.SLIDE_LEFT);
+        // Check if any zones are loaded before you can switch to a zone view.
+        if (_view.getZones()) {
+            var zoneView = new TadoZoneView(0);
+            WatchUi.switchToView(zoneView, new TadoZoneBehaviorDelegate(zoneView), WatchUi.SLIDE_LEFT);
+        }
 
-        return false; // allow InputDelegate function to be called
+        return false; // @todo why false?
     }
 }

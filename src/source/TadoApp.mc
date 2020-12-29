@@ -13,11 +13,18 @@ class TadoApp extends App.AppBase
     // onStart() is called on application start up
     function onStart(state)
     {
+        System.println("TadoApp::onStart");
+        System.println("state = " + state);
     }
 
     // onStop() is called when your application is exiting
     function onStop(state)
     {
+        System.println("TadoApp::onStop");
+        System.println("state = " + state);
+
+        // Empty the zones property to make sure fresh data is gathered the next time.
+        App.getApp().setProperty("zones", null);
     }
 
     // Return the initial view of your application here
@@ -30,8 +37,8 @@ class TadoApp extends App.AppBase
         } else if ( apiToken == null ) {
             return [ new LoginView(), new LoginDelegate() ];
         } else {
-            var view = new TadoMainView();
-            return [ view, new TadoMainBehaviorDelegate(view) ];
+            var mainView = new TadoMainView();
+            return [ mainView, new TadoMainBehaviorDelegate(mainView) ];
         }
     }
 }

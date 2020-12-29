@@ -20,7 +20,7 @@ class TadoMainView extends WatchUi.View
     protected var _zones;
 
     // The y-ax on which the drawing of the zones start.
-    protected var _y = 70;
+    protected var _startY = 70;
 
     protected var _font = Graphics.FONT_TINY;
     protected var _temperatureUnit = "celsius";
@@ -31,6 +31,11 @@ class TadoMainView extends WatchUi.View
 
         if (System.getDeviceSettings().temperatureUnits == TEMPERATURE_FAHRENHEIT) {
             _temperatureUnit = "fahrenheit";
+        }
+
+        var zones = App.getApp().getProperty("zones");
+        if (zones) {
+            _zones = zones;
         }
     }
 
@@ -61,7 +66,7 @@ class TadoMainView extends WatchUi.View
         if (homeId == null) {
             WatchUi.pushView(new TadoHomesView(), null, WatchUi.SLIDE_IMMEDIATE);
         }
-        else {
+        else if (_zones == null) {
             var transaction = new TadoMainTransaction(self);
             transaction.go();
         }
@@ -106,6 +111,7 @@ class TadoMainView extends WatchUi.View
             // Get variables for the drawing context
             var screenWidth = dc.getWidth();
             var fontHeight = dc.getFontHeight(_font);
+            var y = _startY;
 
             var zonesToDisplay = _zones.size();
 
@@ -119,10 +125,10 @@ class TadoMainView extends WatchUi.View
                 var zone = _zones[i];
 
                 // Draw the zone name.
-                dc.drawText((screenWidth / 2), _y, _font, zone["name"], Graphics.TEXT_JUSTIFY_CENTER);
+                dc.drawText((screenWidth / 2), y, _font, zone["name"], Graphics.TEXT_JUSTIFY_CENTER);
 
                 // Add font height to y for the y possition of a new line.
-                _y = (_y + fontHeight);
+                y = (y + fontHeight);
 
                 // Round the tempretures and humidity to 1 decimal.
                 var textTemprature = zone["temperature"][_temperatureUnit].format("%.1f")
@@ -130,19 +136,19 @@ class TadoMainView extends WatchUi.View
                 var textHumidity = zone["humidity"].format("%.1f") + "%";
 
                 // Draw the current temperature and the set temparature.
-                dc.drawBitmap(20, _y, _iconTemperature);
-                dc.drawText(45, _y, Graphics.FONT_XTINY, textTemprature, Graphics.TEXT_JUSTIFY_LEFT);
+                dc.drawBitmap(20, y, _iconTemperature);
+                dc.drawText(45, y, Graphics.FONT_XTINY, textTemprature, Graphics.TEXT_JUSTIFY_LEFT);
 
                 // Draw the humidity.
-                dc.drawBitmap(140, _y, _iconHumidity);
-                dc.drawText(165, _y, Graphics.FONT_XTINY, textHumidity, Graphics.TEXT_JUSTIFY_LEFT);
+                dc.drawBitmap(140, y, _iconHumidity);
+                dc.drawText(165, y, Graphics.FONT_XTINY, textHumidity, Graphics.TEXT_JUSTIFY_LEFT);
 
-                _y = (_y + 5);
+                y = (y + 5);
 
-                dc.drawLine(0, _y + fontHeight, screenWidth, _y + fontHeight);
+                dc.drawLine(0, y + fontHeight, screenWidth, y + fontHeight);
 
                 // Add font height to y for the y possition of a new line.
-                _y = (_y + 5 + fontHeight);
+                y = (y + 5 + fontHeight);
             }
         }
     }
@@ -152,5 +158,6 @@ class TadoMainView extends WatchUi.View
     // memory.
     function onHide()
     {
+        // Free resources, but how?
     }
 }
