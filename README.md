@@ -2,6 +2,9 @@
 
 A Garmin Connect IQ widget for your tado° smart thermostat.
 
+![tado CIQ widget example 1](assets/screenshots/tado-ciq-widget-1.png "tado CIQ widget example 1") ![tado CIQ widget example 2](assets/screenshots/tado-ciq-widget-2.png "tado CIQ widget example 2")
+
+
 This widget depends on data from the [tado° Connect IQ bridge](https://github.com/MGHollander/tado-ciq-bridge). This
 Laravel based API serves tailored made data data to make the traffic as fast as possible.
 
