@@ -2,6 +2,8 @@
   <bitmap id="LauncherIcon" filename="../images/tado_logo_square_color_40x40.png" />
   <bitmap id="IconHumidity" filename="../images/icon_humidity_24x24.png" />
   <bitmap id="IconTemperature" filename="../images/icon_temperature_24x24.png" />
+  <bitmap id="IconArrowUp" filename="../images/icon_arrow_up_16x16.png" />
+  <bitmap id="IconArrowDown" filename="../images/icon_arrow_down_16x16.png" />
   
   <drawable-list id="BackgroundColorWhite">
     <shape type="rectangle" x="0" y="0" width="fill" height="fill" color="Gfx.COLOR_WHITE" />

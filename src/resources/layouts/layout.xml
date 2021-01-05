@@ -29,10 +29,7 @@
   <layout id="ZoneLayout">  
     <drawable id="BackgroundColorWhite" />
     <drawable id="TadoHeader" />
-    
-    <bitmap id="IconArrowUp" x="center" y="top" filename="../images/icon_arrow_up_16x16.png" />
-    <bitmap id="IconArrowDown" x="center" y="bottom" filename="../images/icon_arrow_down_16x16.png" />
-    
+
     <label id="ZoneName" x="center" y="26%" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
     <label id="ZoneTemperature" x="center" y="41%" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
     <label id="ZoneSetting" x="center" y="70%" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />

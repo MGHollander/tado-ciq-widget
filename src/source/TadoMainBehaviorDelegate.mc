@@ -19,9 +19,9 @@ class TadoMainBehaviorDelegate extends WatchUi.BehaviorDelegate
         // Check if any zones are loaded before you can switch to a zone view.
         if (_view.getZones()) {
             var zoneView = new TadoZoneView(0);
-            WatchUi.switchToView(zoneView, new TadoZoneBehaviorDelegate(zoneView), WatchUi.SLIDE_LEFT);
+            WatchUi.pushView(zoneView, new TadoZoneBehaviorDelegate(zoneView), WatchUi.SLIDE_LEFT);
         }
 
-        return false; // @todo why false?
+        return true;
     }
 }

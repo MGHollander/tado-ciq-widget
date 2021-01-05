@@ -12,22 +12,50 @@ class TadoZoneBehaviorDelegate extends WatchUi.BehaviorDelegate
         _view = view;
     }
 
+    function nextZone()
+    {
+        var zoneView = new TadoZoneView(_view.getNextZone());
+        WatchUi.switchToView(zoneView, new TadoZoneBehaviorDelegate(zoneView), WatchUi.SLIDE_UP);
+    }
+
+    function previousZone()
+    {
+        var zoneView = new TadoZoneView(_view.getPreviousZone());
+        WatchUi.switchToView(zoneView, new TadoZoneBehaviorDelegate(zoneView), WatchUi.SLIDE_DOWN);
+    }
+
     function onSelect()
     {
         System.println("TadoZoneBehaviorDelegate::onSelect");
 
-        var zoneView = new TadoZoneView(_view.getNextZone());
-        WatchUi.switchToView(zoneView, new TadoZoneBehaviorDelegate(zoneView), WatchUi.SLIDE_DOWN);
+        nextZone();
 
-        return false;
+        return true;
+    }
+
+    function onNextPage()
+    {
+        System.println("TadoZoneBehaviorDelegate::onNextPage");
+
+        nextZone();
+
+        return true;
+    }
+
+    function onPreviousPage()
+    {
+        System.println("TadoZoneBehaviorDelegate::onPreviousPage");
+
+        previousZone();
+
+        return true;
     }
 
     function onBack()
     {
         System.println("TadoZoneBehaviorDelegate::onBack");
 
-        var mainView = new TadoMainView();
-        WatchUi.switchToView(mainView, new TadoMainBehaviorDelegate(mainView), WatchUi.SLIDE_RIGHT);
+        WatchUi.popView(WatchUi.SLIDE_RIGHT);
 
         return true;
     }

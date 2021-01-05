@@ -17,12 +17,16 @@ class TadoHomesMenuDelegate extends WatchUi.Menu2InputDelegate
         System.println("item.getId(): " + id);
 
         selectHome(id);
+
+        return true;
     }
 
     // Block the back button handling
     function onBack()
     {
         System.println("TadoHomesMenuDelegate::onBack");
+
+        return true;
     }
 
     function selectHome(id)

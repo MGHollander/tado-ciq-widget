@@ -8,6 +8,8 @@ class TadoZoneView extends WatchUi.View
     const TEMPERATURE_CELSIUS = 0;
     const TEMPERATURE_FAHRENHEIT = 1;
 
+    protected var _arrowDown;
+    protected var _arrowUp;
     protected var _currentZone;
     protected var _humidity;
     protected var _name;
@@ -46,6 +48,17 @@ class TadoZoneView extends WatchUi.View
         return nextZone;
     }
 
+    function getPreviousZone()
+    {
+        var previousZone = _currentZone - 1;
+
+        if (previousZone == -1) {
+            previousZone = (_zones.size() - 1);
+        }
+
+        return previousZone;
+    }
+
     // Load your resources here
     function onLayout(dc)
     {
@@ -58,6 +71,8 @@ class TadoZoneView extends WatchUi.View
         _temperature = View.findDrawableById("ZoneTemperature");
 
         _settingText = WatchUi.loadResource(Rez.Strings.ZoneSetting);
+        _arrowUp = WatchUi.loadResource(Rez.Drawables.IconArrowUp);
+        _arrowDown = WatchUi.loadResource(Rez.Drawables.IconArrowDown);
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -79,6 +94,15 @@ class TadoZoneView extends WatchUi.View
         var zone = _zones[_currentZone];
 
         System.println("zone = " + zone);
+
+        // Draw navigation arrows if there is more then one zone.
+        if(_zones.size() > 1) {
+            var horizontalCenter = ((dc.getWidth() / 2) - 8);
+            var screenHeight = dc.getHeight();
+
+            dc.drawBitmap(horizontalCenter, 0, _arrowUp);
+            dc.drawBitmap(horizontalCenter, screenHeight - 16, _arrowDown);
+        }
 
         _name.setText(zone["name"]);
         _humidity.setText(zone["humidity"].format("%.1f") + "%");
