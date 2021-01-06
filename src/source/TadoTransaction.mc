@@ -57,7 +57,13 @@ class TadoTransaction
             System.println("Response: " + responseCode);
             System.println("data: " + data);
 
-            handleError(responseCode);
+            var message = "";
+            if (data["message"] != null) {
+                System.println("has message");
+                message = data["message"];
+            }
+
+            handleError(responseCode, message);
         }
     }
 
@@ -79,10 +85,13 @@ class TadoTransaction
         WatchUi.switchToView(new LoginView(), null, WatchUi.SLIDE_IMMEDIATE);
     }
 
-    // Function to put error handling
-    function handleError(error)
+    // Handle an error from the server
+    function handleError(code, message)
     {
         System.println("TadoTransaction::handleError");
-        System.println("error = " + error);
+        System.println("code = " + code);
+        System.println("message = " + message);
+
+        WatchUi.switchToView(new ErrorView(code, message), null, WatchUi.SLIDE_IMMEDIATE);
     }
 }

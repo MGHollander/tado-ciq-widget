@@ -5,11 +5,13 @@ using Toybox.WatchUi;
 
 // The LoginTransaction is a special transaction that handles
 // getting the api token.
-class LoginTransaction
+class LoginTransaction extends TadoTransaction
 {
     // Constructor
     function initialize()
     {
+        TadoTransaction.initialize();
+
         // Register a callback to handle a response from the
         // OAUTH request. If there is a response waiting this
         // will fire right away
@@ -27,7 +29,7 @@ class LoginTransaction
             handleResponse(value.data);
         }
         else {
-            handleError(value.responseCode);
+            handleError(value.responseCode, value.data);
         }
     }
 
@@ -62,18 +64,5 @@ class LoginTransaction
         // Switch to the data view
         var view = new TadoMainView();
         WatchUi.switchToView(view, new TadoMainBehaviorDelegate(view), WatchUi.SLIDE_IMMEDIATE);
-    }
-
-    // Handle a error from the server
-    function handleError(code)
-    {
-        System.println("LoginTransaction::handleError");
-
-        var msg = WatchUi.loadResource( Rez.Strings.Error );
-        msg += code;
-
-        System.println(msg);
-
-        WatchUi.switchToView(new ErrorView(msg), null, WatchUi.SLIDE_IMMEDIATE);
     }
 }

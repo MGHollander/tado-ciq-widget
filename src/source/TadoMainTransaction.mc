@@ -26,12 +26,4 @@ class TadoMainTransaction extends TadoTransaction
 
         _view.setZones(data);
     }
-
-
-    // Function to put error handling
-    function handleError(error)
-    {
-        System.println("TadoMainTransaction::handleError");
-        System.println("error = " + error);
-    }
 }
