@@ -1,14 +1,30 @@
 # tado° CIQ widget
 
-A Garmin Connect IQ widget for your tado° smart thermostat.
+A widget to display information about your tado° smart thermostat on your Garmin device.
 
 ![tado CIQ widget example 1](assets/screenshots/tado-ciq-widget-1.png "tado CIQ widget example 1") ![tado CIQ widget example 2](assets/screenshots/tado-ciq-widget-2.png "tado CIQ widget example 2")
-
 
 This widget depends on data from the [tado° Connect IQ bridge](https://github.com/MGHollander/tado-ciq-bridge). This
 Laravel based API serves tailored made data data to make the traffic as fast as possible.
 
-This is still a work in progress. New features will be introduced every now and then.
+This is still a work in progress. New features will be introduced every now and then. If you have questions, ideas or 
+found bugs, please [create an issue](https://github.com/MGHollander/tado-ciq-widget/issues/new/choose).
+
+*This widget is not build by tado°.*
+
+## Device support
+
+At this moment the widget is in alpha phase and only supports the Fenix 5 plus. Support for other devices will be added 
+in the future.
+
+You are free to download the source of the widget and compile it for your own device. It is not tested (yet) on any 
+other device then the Fenix 5 plus though.
+
+## Installation
+
+- Download the package for your device from the [releases page](https://github.com/MGHollander/tado-ciq-widget/releases).
+- Connect your device to your computer using a USB cable.
+- Place the package in the `Garmin/Apps` folder on your device.
 
 ## Notes
 
