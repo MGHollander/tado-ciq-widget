@@ -26,8 +26,7 @@ class TadoTransaction
                 :method => Comm.HTTP_REQUEST_METHOD_GET,
                 :headers => {
                     "Accept" => "application/json",
-                    "Content-Type" => Comm.REQUEST_CONTENT_TYPE_JSON,
-                    "CIQ-app" => "Tado widget"
+                    "Content-Type" => Comm.REQUEST_CONTENT_TYPE_JSON
                 },
                 :responseType => Comm.HTTP_RESPONSE_CONTENT_TYPE_JSON
             },
@@ -58,7 +57,7 @@ class TadoTransaction
             System.println("data: " + data);
 
             var message = "";
-            if (data["message"] != null) {
+            if (data instanceof Dictionary && data["message"] != null) {
                 System.println("has message");
                 message = data["message"];
             }
