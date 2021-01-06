@@ -22,6 +22,8 @@ This is still a work in progress. New features will be introduced every now and 
 - Use System.error() to report errors in the production app.
 - Replace the hidden access modifier for protected, since hidden is just a synonym..
 - Use the screen height to determine how many zones can be displayed on the screen.
+- Test the 401 handling in the onReceive method of TadoTransaction. Is this working as expected?
+- Test the error handling in the accessCodeResult method of the login transaction. Is this working as expected?
 - Remove all debug information.
 - Add unit tests (https://developer.garmin.com/connect-iq/core-topics/unit-testing/).
 - Add error reporting (https://developer.garmin.com/connect-iq/core-topics/exception-reporting-tool/).
