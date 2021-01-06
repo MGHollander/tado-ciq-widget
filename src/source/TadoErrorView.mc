@@ -27,6 +27,10 @@ class ErrorView extends WatchUi.View
         var code = View.findDrawableById("ErrorCode");
         var message = View.findDrawableById("ErrorMessage");
 
+        var msg = WatchUi.loadResource( Rez.Strings.Error );
+
+        _code += " " + msg;
+
         code.setText(_code.toString());
         message.setText(_message.toString());
     }
