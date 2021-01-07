@@ -71,9 +71,11 @@ device. It is not tested (yet) on any other device then the Fenix 5 plus though.
 
 ## Feedback
 
-Please feel free to give feedback, share ideas or report bugs. Email me at
-[marc@mghollander.nl](mailto:marc@mghollander.nl) or
-[add an issue](https://github.com/MGHollander/tado-ciq-widget/issues).
+Please feel free to give feedback, share ideas or report bugs.
+
+- [Add an issue](https://github.com/MGHollander/tado-ciq-widget/issues)
+- [Post a question in the dedicated topic on the Garmin Developer forum](https://forums.garmin.com/developer/connect-iq/f/showcase/250769/widget-tado-ciq-widget)
+- [Email me at marc@mghollander.nl](mailto:marc@mghollander.nl)
 
 ## Donate
 
