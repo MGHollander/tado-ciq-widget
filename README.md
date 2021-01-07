@@ -1,7 +1,7 @@
 # tado° CIQ widget
 
 A [Garmin Connect IQ widget](https://developer.garmin.com/connect-iq/overview/)
-to display information about from your tado° smart thermostat on your Garmin
+to display information from your tado° smart thermostat on your Garmin
 device.
 
 ![tado CIQ widget example 1](assets/screenshots/tado-ciq-widget-1.png "tado CIQ widget example 1") ![tado CIQ widget example 2](assets/screenshots/tado-ciq-widget-2.png "tado CIQ widget example 2")
