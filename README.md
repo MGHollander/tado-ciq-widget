@@ -47,6 +47,8 @@ device. It is not tested (yet) on any other device then the Fenix 5 plus though.
 ## Todo
 
 - Create issues for all other todo items.
+- A -2 error pops up very now and then when the device is not connected to a
+  phone.
 - Check if all web requests use the TadoTransaction.
 - Fix the build warning "BUILD: WARNING: This is a 'widget' app type but no
   source code was annotated with (:glance). The entire application will be
