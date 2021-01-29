@@ -1,17 +1,23 @@
 <strings>
   <string id="AppName">tado° CIQ widget</string>
 
-  <string id="ConnectString1">Please connect</string>
-  <string id="ConnectString2">your phone to</string>
-  <string id="ConnectString3">this device</string>
+  <string id="Connect1">Please connect</string>
+  <string id="Connect2">your phone to</string>
+  <string id="Connect3">this device</string>
 
-  <string id="GoToPhoneString1">Open the Garmin</string>
-  <string id="GoToPhoneString2">Connect app</string>
+  <string id="GoToPhone1">Open the Garmin</string>
+  <string id="GoToPhone2">Connect app</string>
 
   <string id="ChooseHome">Choose a home</string>
-  <string id="Error">error</string>
+  <string id="Error">Error</string>
   <string id="Loading">Gathering data...</string>
-  <string id="MoreString1">Press start for</string>
-  <string id="MoreString2">more</string>
+
+  <string id="NoZones1">No zones found</string>
+  <string id="NoZones2">Setup zones in your</string>
+  <string id="NoZones3">tado° app</string>
+
+  <string id="More1">Press start for</string>
+  <string id="More2">more</string>
+
   <string id="ZoneSetting">Set to</string>
 </strings>

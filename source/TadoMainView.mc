@@ -8,25 +8,13 @@ class TadoMainView extends WatchUi.View
     const TEMPERATURE_CELSIUS = 0;
     const TEMPERATURE_FAHRENHEIT = 1;
 
-    protected var _fontHeight;
-    protected var _iconTemperature;
-    protected var _iconHumidity;
-    protected var _loading;
-    protected var _more1;
-    protected var _more2;
-    protected var _moreText1;
-    protected var _moreText2;
-    protected var _screenWidth;
     protected var _zones;
-
-    // The y-ax on which the drawing of the zones start.
-    protected var _startY = 70;
-
-    protected var _font = Graphics.FONT_TINY;
     protected var _temperatureUnit = "celsius";
 
     function initialize()
     {
+        System.println("TadoMainView::initialize");
+
         View.initialize();
 
         if (System.getDeviceSettings().temperatureUnits == TEMPERATURE_FAHRENHEIT) {
@@ -41,17 +29,9 @@ class TadoMainView extends WatchUi.View
 
     function onLayout(dc)
     {
-        setLayout(Rez.Layouts.MainLayout(dc));
+        System.println("TadoMainView::onLayout");
 
-        // Load resources.
-        _loading = View.findDrawableById("MainLayoutLoading");
-        _more1 = View.findDrawableById("MainLayoutMore1");
-        _more2 = View.findDrawableById("MainLayoutMore2");
-
-        _iconTemperature = WatchUi.loadResource(Rez.Drawables.IconTemperature);
-        _iconHumidity = WatchUi.loadResource(Rez.Drawables.IconHumidity);
-        _moreText1 = WatchUi.loadResource(Rez.Strings.MoreString1);
-        _moreText2 = WatchUi.loadResource(Rez.Strings.MoreString2);
+        setLayout(Rez.Layouts.MainLayoutLoading(dc));
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -94,63 +74,67 @@ class TadoMainView extends WatchUi.View
 
         // We need to update the layout before we start to draw the zones.
         if (_zones) {
-            // Remove the loading text.
-            _loading.setText("");
+            var numberOfZones = _zones.size();
 
-            // Set more text.
-            _more1.setText(_moreText1);
-            _more2.setText(_moreText2);
+            // There is no display that suppots more then
+            if (numberOfZones > 3) {
+                numberOfZones = 3;
+            }
+
+            switch (numberOfZones) {
+                case 0:
+                    setLayout(Rez.Layouts.MainLayoutNoZones(dc));
+                    System.println("MainLayoutNoZones");
+                    break;
+
+                case 1:
+                    setLayout(Rez.Layouts.MainOneZoneLayout(dc));
+                    System.println("MainOneZoneLayout");
+                    break;
+
+                case 2:
+                    setLayout(Rez.Layouts.MainTwoZonesLayout(dc));
+                    System.println("MainTwoZonesLayout");
+                    break;
+
+                case 3:
+                    setLayout(Rez.Layouts.MainThreeZonesLayout(dc));
+                    System.println("MainThreeZonesLayout");
+                    break;
+            }
+
+            System.println("_zones = " + _zones);
+
+            for (var i = 0; i < numberOfZones; i++) {
+                var name = _zones[i]["name"];
+                var temprature = _zones[i]["temperature"][_temperatureUnit].format("%.1f") + "°";
+                var setting = _zones[i]["temperature"]["setting"][_temperatureUnit].format("%.1f") + "°";
+                var humidity = _zones[i]["humidity"].format("%.1f") + "%";
+
+                var nameDrawable = View.findDrawableById("MainZone" + numberOfZones + "Name" + i);
+                if (nameDrawable) {
+                    nameDrawable.setText(name);
+                }
+
+                var temperatureDrawable = View.findDrawableById("MainZone" + numberOfZones + "Temperature" + i);
+                if (temperatureDrawable) {
+                    temperatureDrawable.setText(temprature);
+                }
+
+                var settingDrawable = View.findDrawableById("MainZone" + numberOfZones + "Setting" + i);
+                if (settingDrawable) {
+                    settingDrawable.setText(setting);
+                }
+
+                var humidityDrawable = View.findDrawableById("MainZone" + numberOfZones + "Humidity" + i);
+                if (humidityDrawable) {
+                    humidityDrawable.setText(humidity);
+                }
+            }
         }
 
         // Call the parent onUpdate function to redraw the layout.
         View.onUpdate(dc);
-
-        if (_zones) {
-            dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-
-            // Get variables for the drawing context
-            var screenWidth = dc.getWidth();
-            var fontHeight = dc.getFontHeight(_font);
-            var y = _startY;
-
-            var zonesToDisplay = _zones.size();
-
-            // Only two zones fit on the watch screen.
-            if (zonesToDisplay > 2) {
-                zonesToDisplay = 2;
-            }
-
-            // Draw the zones.
-            for (var i = 0; i < zonesToDisplay; i++) {
-                var zone = _zones[i];
-
-                // Draw the zone name.
-                dc.drawText((screenWidth / 2), y, _font, zone["name"], Graphics.TEXT_JUSTIFY_CENTER);
-
-                // Add font height to y for the y possition of a new line.
-                y = (y + fontHeight);
-
-                // Round the tempretures and humidity to 1 decimal.
-                var textTemprature = zone["temperature"][_temperatureUnit].format("%.1f")
-                    + "/" + zone["temperature"]["setting"][_temperatureUnit].format("%.1f");
-                var textHumidity = zone["humidity"].format("%.1f") + "%";
-
-                // Draw the current temperature and the set temparature.
-                dc.drawBitmap(20, y, _iconTemperature);
-                dc.drawText(45, y, Graphics.FONT_XTINY, textTemprature, Graphics.TEXT_JUSTIFY_LEFT);
-
-                // Draw the humidity.
-                dc.drawBitmap(140, y, _iconHumidity);
-                dc.drawText(165, y, Graphics.FONT_XTINY, textHumidity, Graphics.TEXT_JUSTIFY_LEFT);
-
-                y = (y + 5);
-
-                dc.drawLine(0, y + fontHeight, screenWidth, y + fontHeight);
-
-                // Add font height to y for the y possition of a new line.
-                y = (y + 5 + fontHeight);
-            }
-        }
     }
 
     // Called when this View is removed from the screen. Save the

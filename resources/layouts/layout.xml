@@ -1,42 +1,115 @@
 <layouts>
-  <layout id="MainLayout">
+  <layout id="MainLayoutLoading">
     <drawable id="TadoHeader" />
-    
-    <label id="MainLayoutLoading" x="center" y="center" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.Loading" />
-    <label id="MainLayoutMore1" x="center" y="190" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
-    <label id="MainLayoutMore2" x="center" y="210" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+
+    <label id="MainLoadingString" x="center" y="center" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.Loading" />
+  </layout>
+
+  <layout id="MainLayoutNoZones">
+    <drawable id="TadoHeader" />
+
+    <label id="MainNoZonesString1" x="center" y="80" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.NoZones1" />
+    <label id="MainNoZonesString2" x="center" y="110" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.NoZones2" />
+    <label id="MainNoZonesString3" x="center" y="140" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.NoZones3" />
+  </layout>
+
+  <layout id="MainOneZoneLayout">
+    <drawable id="TadoHeader" />
+
+    <label id="MainZone1Name0" x="center" y="45" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <label id="MainZone1Temperature0" x="center" y="85" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <label id="MainZone1SettingText0" x="70" y="155" font="Gfx.FONT_XTINY" text="@Strings.ZoneSetting" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="MainZone1Setting0" x="125" y="155" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+
+    <bitmap id="MainZone1IconHumidity0" filename="../images/icon_humidity_white_black_24x24.png" x="71" y="192" dithering="none" />
+    <label id="MainZone1Humidity0" x="99" y="190" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+  </layout>
+
+  <layout id="MainTwoZonesLayout">
+    <drawable id="TadoHeader" />
+
+    <label id="MainZone2Name0" x="center" y="40" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <bitmap id="MainZone2IconTemperature0" x="10" y="70" filename="../images/icon_temperature_white_black_24x24.png" dithering="none" />
+    <label id="MainZone2Temperature0" x="35" y="70" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="MainZone2TemperatureSeparator0" x="80" y="70" font="Gfx.FONT_XTINY" text="/" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="MainZone2Setting0" x="89" y="70" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <bitmap id="MainZone2IconHumidity0" x="145" y="70" filename="../images/icon_humidity_white_black_24x24.png" dithering="none" />
+    <label id="MainZone2Humidity0" x="170" y="70" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+
+    <drawable id="MainZone2Seperator1" />
+
+    <label id="MainZone2Name1" x="center" y="110" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <bitmap id="MainZone2IconTemperature1" x="10" y="140" filename="../images/icon_temperature_white_black_24x24.png" dithering="none" />
+    <label id="MainZone2Temperature1" x="35" y="140" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="MainZone2TemperatureSeparator1" x="80" y="140" font="Gfx.FONT_XTINY" text="/" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="MainZone2Setting1" x="89" y="140" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <bitmap id="MainZone2IconHumidity1" x="145" y="140" filename="../images/icon_humidity_white_black_24x24.png" dithering="none" />
+    <label id="MainZone2Humidity1" x="170" y="140" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+
+    <drawable id="MainZone2Seperator2" />
+
+    <label id="MainZone2More1" x="center" y="180" font="Gfx.FONT_XTINY" text="@Strings.More1" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <label id="MainZone2More2" x="center" y="200" font="Gfx.FONT_XTINY" text="@Strings.More2" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+  </layout>
+
+  <layout id="MainThreeZonesLayout">
+    <drawable id="TadoHeader" />
+
+    <label id="MainZone3Name0" x="center" y="40" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <bitmap id="MainZone3IconTemperature0" x="10" y="70" filename="../images/icon_temperature_white_black_24x24.png" dithering="none" />
+    <label id="MainZone3Temperature0" x="35" y="70" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="MainZone3TemperatureSeparator0" x="80" y="70" font="Gfx.FONT_XTINY" text="/" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="MainZone3Setting0" x="89" y="70" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <bitmap id="MainZone3IconHumidity0" x="145" y="70" filename="../images/icon_humidity_white_black_24x24.png" dithering="none" />
+    <label id="MainZone3Humidity0" x="170" y="70" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+
+    <drawable id="MainZone2Seperator1" />
+
+    <label id="MainZone3Name1" x="center" y="110" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <bitmap id="MainZone3IconTemperature1" x="10" y="140" filename="../images/icon_temperature_white_black_24x24.png" dithering="none" />
+    <label id="MainZone3Temperature1" x="35" y="140" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="MainZone3TemperatureSeparator1" x="80" y="140" font="Gfx.FONT_XTINY" text="/" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="MainZone3Setting1" x="89" y="140" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <bitmap id="MainZone3IconHumidity1" x="145" y="140" filename="../images/icon_humidity_white_black_24x24.png" dithering="none" />
+    <label id="MainZone3Humidity1" x="170" y="140" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+
+    <drawable id="MainZone2Seperator2" />
+
+    <label id="MainZone2More1" x="center" y="180" font="Gfx.FONT_XTINY" text="@Strings.More1" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <label id="MainZone2More2" x="center" y="200" font="Gfx.FONT_XTINY" text="@Strings.More2" justification="Gfx.TEXT_JUSTIFY_CENTER" />
   </layout>
 
   <layout id="Gcm">
-    <drawable id="IconGcm" />
-    
-    <label x="center" y="100" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.ConnectString1" />
-    <label x="center" y="130" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.ConnectString2" />
-    <label x="center" y="160" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.ConnectString3" />
+    <drawable id="TadoHeader" />
+
+    <label x="center" y="80" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.Connect1" />
+    <label x="center" y="110" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.Connect2" />
+    <label x="center" y="140" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.Connect3" />
   </layout>
-  
+
   <layout id="LoginLayout">
-    <drawable id="IconGcm" />
-    
-    <label x="center" y="100" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.GoToPhoneString1" />
-    <label x="center" y="130" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.GoToPhoneString2" />
+    <drawable id="TadoHeader" />
+
+    <label x="center" y="80" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.GoToPhone1" />
+    <label x="center" y="110" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.GoToPhone2" />
   </layout>
-  
+
   <layout id="ErrorLayout">
     <drawable id="TadoHeader" />
-    
+
     <label id="ErrorCode" x="center" y="80" justification="Gfx.TEXT_JUSTIFY_CENTER" />
-    <label id="ErrorMessage" x="center" y="120" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <label id="ErrorMessage" x="center" y="110" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
   </layout>
-  
-  <layout id="ZoneLayout">  
+
+  <layout id="ZoneLayout">
     <drawable id="BackgroundColorWhite" />
     <drawable id="TadoHeader" />
 
-    <label id="ZoneName" x="center" y="26%" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
-    <label id="ZoneTemperature" x="center" y="41%" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
-    <label id="ZoneSetting" x="center" y="70%" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
-    <label id="ZoneHumidity" x="center" y="82%" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
-    
+    <label id="ZoneName" x="center" y="45" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
+    <label id="ZoneTemperature" x="center" y="85" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
+    <label id="ZoneSetting" x="center" y="155" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
+
+    <bitmap id="ZoneIconHumidity" filename="../images/icon_humidity_black_white_24x24.png" x="71" y="192" dithering="none" />
+    <label id="ZoneHumidity" x="99" y="190" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLACK" />
   </layout>
 </layouts>

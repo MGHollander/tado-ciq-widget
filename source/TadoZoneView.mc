@@ -91,23 +91,23 @@ class TadoZoneView extends WatchUi.View
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
 
-        var zone = _zones[_currentZone];
+        if (_zones.size() > 0) {
+            var zone = _zones[_currentZone];
 
-        System.println("zone = " + zone);
+            // Draw navigation arrows if there is more then one zone.
+            if(_zones.size() > 1) {
+                var horizontalCenter = ((dc.getWidth() / 2) - 8);
+                var screenHeight = dc.getHeight();
 
-        // Draw navigation arrows if there is more then one zone.
-        if(_zones.size() > 1) {
-            var horizontalCenter = ((dc.getWidth() / 2) - 8);
-            var screenHeight = dc.getHeight();
+                dc.drawBitmap(horizontalCenter, 30, _arrowUp);
+                dc.drawBitmap(horizontalCenter, screenHeight - 18, _arrowDown);
+            }
 
-            dc.drawBitmap(horizontalCenter, 0, _arrowUp);
-            dc.drawBitmap(horizontalCenter, screenHeight - 16, _arrowDown);
+            _name.setText(zone["name"]);
+            _humidity.setText(zone["humidity"].format("%.1f") + "%");
+            _temperature.setText(zone["temperature"][_temperatureUnit].format("%.1f") + "°");
+            _setting.setText(_settingText + " " + zone["temperature"]["setting"][_temperatureUnit].format("%.1f") + "°");
         }
-
-        _name.setText(zone["name"]);
-        _humidity.setText(zone["humidity"].format("%.1f") + "%");
-        _temperature.setText(zone["temperature"][_temperatureUnit].format("%.1f") + "°");
-        _setting.setText(_settingText + " " + zone["temperature"]["setting"][_temperatureUnit].format("%.1f") + "°");
     }
 
     // Called when this View is removed from the screen. Save the

@@ -1,27 +1,23 @@
 <drawables>
-  <bitmap id="LauncherIcon" filename="../images/tado_logo_square_color_40x40.png" />
-  <bitmap id="IconHumidity" filename="../images/icon_humidity_24x24.png" />
-  <bitmap id="IconTemperature" filename="../images/icon_temperature_24x24.png" />
-  <bitmap id="IconArrowUp" filename="../images/icon_arrow_up_16x16.png" />
-  <bitmap id="IconArrowDown" filename="../images/icon_arrow_down_16x16.png" />
-  
+  <bitmap id="LauncherIcon" filename="../images/tado_logo_white_black_40x40.png" dithering="none" />
+  <bitmap id="IconTemperature" filename="../images/icon_temperature_white_black_24x24.png" dithering="none" />
+  <bitmap id="IconArrowUp" filename="../images/icon_arrow_up_16x16.png" dithering="none" />
+  <bitmap id="IconArrowDown" filename="../images/icon_arrow_down_16x16.png" dithering="none" />
+
   <drawable-list id="BackgroundColorWhite">
     <shape type="rectangle" x="0" y="0" width="fill" height="fill" color="Gfx.COLOR_WHITE" />
   </drawable-list>
-  
-  <drawable-list id="IconGcm" background="Gfx.COLOR_BLACK">
-    <bitmap id="IconGcmBitmap" filename="../images/gcm.png" x="center" y="25" dithering="none" >
-      <palette>
-        <color>000000</color>
-        <color>555555</color>
-        <color>AAAAAA</color>
-        <color>00AAFF</color>
-      </palette>
-    </bitmap> 
-  </drawable-list>
-  
+
   <drawable-list id="TadoHeader">
-    <shape type="rectangle" x="0" y="0" width="fill" height="65" color="Gfx.COLOR_WHITE" />
-    <bitmap id="TadoLogo" x="70" y="20" filename="../images/tado_logo_black_white_100x35.png" />
+    <shape type="rectangle" x="0" y="0" width="fill" height="32" color="Gfx.COLOR_WHITE" />
+    <bitmap id="TadoLogo" x="center" y="8" filename="../images/tado_logo_black_white_50x18.png" dithering="none" />
+  </drawable-list>
+
+  <drawable-list id="MainZone2Seperator1">
+    <shape type="rectangle" x="0" y="105" width="fill" height="1" color="Gfx.COLOR_WHITE" />
+  </drawable-list>
+
+  <drawable-list id="MainZone2Seperator2">
+    <shape type="rectangle" x="0" y="175" width="fill" height="1" color="Gfx.COLOR_WHITE" />
   </drawable-list>
 </drawables>
