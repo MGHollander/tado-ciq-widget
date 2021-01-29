@@ -42,7 +42,16 @@ device. It is not tested (yet) on any other device then the Fenix 5 plus though.
 
 ## Notes
 
-- The main screen only shows 2 zones. You can sort the zones in the Tado app.
+- The main screen might not display all zones. You can sort the zones in the
+  Tado app.
+
+## Development
+
+You can add your own features if you like. If you want to extend the features of
+the API, then you need to be able to access it over a global reachable secure
+connection. You can use [Expose](https://beyondco.de/docs/expose/introduction)
+to make your development environment available for the widget. Change the
+BaseUrl in TadoApp.mc to the Expose URL to test.
 
 ## Todo
 
