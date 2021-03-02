@@ -1,0 +1,23 @@
+<strings>
+  <string id="AppName">tado° CIQ widget</string>
+
+  <string id="Connect1">Verbind je</string>
+  <string id="Connect2">telefoon met</string>
+  <string id="Connect3">dit apparaat</string>
+
+  <string id="GoToPhone1">Open de Garmin</string>
+  <string id="GoToPhone2">Connect app</string>
+
+  <string id="ChooseHome">Kies een woning</string>
+  <string id="Error">Error</string>
+  <string id="Loading">Gegevens ophalen...</string>
+
+  <string id="NoZones1">Geen zones gevonden</string>
+  <string id="NoZones2">Stel zones in via</string>
+  <string id="NoZones3">de tado° app</string>
+
+  <string id="More1">Druk op start</string>
+  <string id="More2">voor meer</string>
+
+  <string id="ZoneSetting">Ingesteld op</string>
+</strings>
