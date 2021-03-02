@@ -112,4 +112,8 @@
     <bitmap id="ZoneIconHumidity" filename="../images/icon_humidity_black_white_24x24.png" x="71" y="192" dithering="none" />
     <label id="ZoneHumidity" x="99" y="190" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLACK" />
   </layout>
+
+  <layout id="GlanceLayout" scope="glance">
+    <label id="GlanceLayoutString" x="0" y="center" font="Gfx.FONT_TINY" text="@Strings.AppName" />
+  </layout>
 </layouts>

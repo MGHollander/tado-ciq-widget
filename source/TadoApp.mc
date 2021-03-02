@@ -42,4 +42,9 @@ class TadoApp extends App.AppBase
             return [ mainView, new TadoMainBehaviorDelegate(mainView) ];
         }
     }
+
+    (:glance)
+    function getGlanceView() {
+        return [ new TadoGlanceView() ];
+    }
 }

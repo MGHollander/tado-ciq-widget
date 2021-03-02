@@ -1,5 +1,5 @@
 <strings>
-  <string id="AppName">tado° CIQ widget</string>
+  <string id="AppName" scope="glance">tado° CIQ widget</string>
 
   <string id="Connect1">Please connect</string>
   <string id="Connect2">your phone to</string>
