@@ -2,6 +2,7 @@
     <iq:application entry="TadoApp" id="679c8a5cb5fe4a4b89315c73e011391c" launcherIcon="@Drawables.LauncherIcon" minSdkVersion="3.0.0" name="@Strings.AppName" type="widget" version="0.1.0">
         <iq:products>
             <iq:product id="fenix5plus"/>
+            <iq:product id="fenix5splus"/>
         </iq:products>
         <iq:permissions>
             <iq:uses-permission id="Communications"/>
