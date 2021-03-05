@@ -74,8 +74,8 @@
 
     <drawable id="MainZone2Seperator2" />
 
-    <label id="MainZone2More1" x="center" y="180" font="Gfx.FONT_XTINY" text="@Strings.More1" justification="Gfx.TEXT_JUSTIFY_CENTER" />
-    <label id="MainZone2More2" x="center" y="200" font="Gfx.FONT_XTINY" text="@Strings.More2" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <label id="MainZone3More1" x="center" y="180" font="Gfx.FONT_XTINY" text="@Strings.More1" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <label id="MainZone3More2" x="center" y="200" font="Gfx.FONT_XTINY" text="@Strings.More2" justification="Gfx.TEXT_JUSTIFY_CENTER" />
   </layout>
 
   <layout id="Gcm">
