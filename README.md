@@ -66,6 +66,7 @@ BaseUrl in TadoApp.mc to the Expose URL to test.
 - A -2 error pops up every now and then when the device is not connected to a
   phone.
 - Check code style/formatting rules.
+- Update layout ids. Most have layout at the end of the id, but some don't...
 - Check if all web requests use the TadoTransaction.
 - Replace the hidden access modifier for protected, since hidden is just a
   synonym..
