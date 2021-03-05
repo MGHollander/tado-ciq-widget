@@ -101,7 +101,7 @@ Support for these devices is requested.
 | --- | --- | ---: | :---: |
 | fenix 6 pro | 260 x 260 | 3.0 | 7 |  |
 | fenix 6x pro | 280 x 280 | 3.0 | 4 |  |
-| Fenix 6s pro | 240 x 240 | 3.0 | 3 |  |
+| Fenix 6s pro | 240 x 240 | 3.0 | 3 | x |
 | fenix 5 | 240 x 240 | 3.0 | 1 |  |
 | fenix 5s | 218 x 218 | 3.0 | 1 |  |
 | fenix 5 plus | 240 x 240 | 3.0 | 1 | x |

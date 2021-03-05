@@ -3,6 +3,7 @@
         <iq:products>
             <iq:product id="fenix5plus"/>
             <iq:product id="fenix5splus"/>
+            <iq:product id="fenix6spro"/>
         </iq:products>
         <iq:permissions>
             <iq:uses-permission id="Communications"/>
