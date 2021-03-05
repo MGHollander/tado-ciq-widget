@@ -114,6 +114,6 @@
   </layout>
 
   <layout id="GlanceLayout" scope="glance">
-    <label id="GlanceLayoutString" x="0" y="center" font="Gfx.FONT_TINY" text="@Strings.AppName" />
+    <label id="GlanceLayoutString" x="10" y="center" font="Gfx.FONT_TINY" text="@Strings.AppName" />
   </layout>
 </layouts>
