@@ -55,14 +55,18 @@ BaseUrl in TadoApp.mc to the Expose URL to test.
 
 ## Todo
 
-- Create issues for all other todo items.
-- A -2 error pops up very now and then when the device is not connected to a
-  phone.
-- Check if all web requests use the TadoTransaction.
-- Fix the build warning "BUILD: WARNING: This is a 'widget' app type but no
-  source code was annotated with (:glance). The entire application will be
-  loaded as a glance process. (glance application)".
+- Add support for
+- Read and apply
+  - Debugging (https://developer.garmin.com/connect-iq/core-topics/debugging/)
+  - Unit testing (https://developer.garmin.com/connect-iq/core-topics/unit-testing/)
+  - Exception Reporting Tool (https://developer.garmin.com/connect-iq/core-topics/exception-reporting-tool/)
+  - Publishing to the Store (https://developer.garmin.com/connect-iq/core-topics/publishing-to-the-store/)
 - Use System.error() to report errors in the production app.
+- Create issues for all other todo items.
+- A -2 error pops up every now and then when the device is not connected to a
+  phone.
+- Check code style/formatting rules.
+- Check if all web requests use the TadoTransaction.
 - Replace the hidden access modifier for protected, since hidden is just a
   synonym..
 - Use the screen height to determine how many zones can be displayed on the
@@ -72,13 +76,8 @@ BaseUrl in TadoApp.mc to the Expose URL to test.
 - Test the error handling in the accessCodeResult method of the login
   transaction. Is this working as expected?
 - Remove all debug information.
-- Add unit tests (<https://developer.garmin.com/connect-iq/core-topics/unit-testing/>).
-- Add error reporting (<https://developer.garmin.com/connect-iq/core-topics/exception-reporting-tool/>).
 - ~Move the app code into a separate dir and move unused images from the app dir
-  to a separate dir.~
-- ~Make an API call to get all zones at once.~
-- ~Clean out most of the code copied from the Strava API widget and start at the
-  beginning for the tado widget (no code that is not needed yet).~
+  to a separate dir (possible in Eclipse, but not in VS code).~
 
 ## Feedback
 
@@ -93,3 +92,21 @@ Please feel free to give feedback, share ideas or report bugs.
 I work on this widget in my free time, but you can support me by making a
 donation (or buy me a beer) via <https://paypal.me/mghollander>. It will be
 appreciated a lot!
+
+## Supported devices
+
+Support for these devices is requested.
+
+| Device | Screen size | CIQ version | Requests | Supported |
+| --- | --- | ---: | :---: |
+| fenix 6 pro | 260 x 260 | 3.0 | 7 |  |
+| fenix 6x pro | 280 x 280 | 3.0 | 4 |  |
+| Fenix 6s pro | 240 x 240 | 3.0 | 3 |  |
+| fenix 5 | 240 x 240 | 3.0 | 1 |  |
+| fenix 5s | 218 x 218 | 3.0 | 1 |  |
+| fenix 5 plus | 240 x 240 | 3.0 | 1 | x |
+| fenix 5s plus | 240 x 240 | 3.0 | 1 | x |
+| forerunner 245 | 240 x 240 | 3.0 | 1 |  |
+| forerunner 945 | 240 x 240 | 3.0 | 1 |  |
+| fenix 3 | 218 x 218 | 1.0 | 1 |  |
+| fenix 3 hr | 218 x 218 | 1.0 | 1 |  |
