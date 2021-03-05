@@ -18,8 +18,7 @@
 
     <label id="MainZone1Name0" x="center" y="45" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" />
     <label id="MainZone1Temperature0" x="center" y="85" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" />
-    <label id="MainZone1SettingText0" x="70" y="155" font="Gfx.FONT_XTINY" text="@Strings.ZoneSetting" justification="Gfx.TEXT_JUSTIFY_LEFT" />
-    <label id="MainZone1Setting0" x="125" y="155" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />
+    <label id="MainZone1Setting0" x="center" y="155" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
 
     <bitmap id="MainZone1IconHumidity0" filename="../images/icon_humidity_white_black_24x24.png" x="71" y="192" dithering="none" />
     <label id="MainZone1Humidity0" x="99" y="190" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_LEFT" />

@@ -9,6 +9,7 @@ class TadoMainView extends WatchUi.View
     const TEMPERATURE_FAHRENHEIT = 1;
 
     protected var _zones;
+    protected var _settingText;
     protected var _temperatureUnit = "celsius";
 
     function initialize()
@@ -32,6 +33,8 @@ class TadoMainView extends WatchUi.View
         System.println("TadoMainView::onLayout");
 
         setLayout(Rez.Layouts.MainLayoutLoading(dc));
+
+        _settingText = WatchUi.loadResource(Rez.Strings.ZoneSetting);
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -123,7 +126,12 @@ class TadoMainView extends WatchUi.View
 
                 var settingDrawable = View.findDrawableById("MainZone" + numberOfZones + "Setting" + i);
                 if (settingDrawable) {
-                    settingDrawable.setText(setting);
+                    if (numberOfZones == 1) {
+                        settingDrawable.setText(_settingText + " " + setting);
+                    }
+                    else {
+                        settingDrawable.setText(setting);
+                    }
                 }
 
                 var humidityDrawable = View.findDrawableById("MainZone" + numberOfZones + "Humidity" + i);
