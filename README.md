@@ -107,7 +107,7 @@ Support for these devices is requested.
 | fenix 5s | 218 x 218 | 3.0 | 1 |  |
 | fenix 5 plus | 240 x 240 | 3.0 | 1 | x |
 | fenix 5s plus | 240 x 240 | 3.0 | 1 | x |
-| forerunner 245 | 240 x 240 | 3.0 | 1 |  |
-| forerunner 945 | 240 x 240 | 3.0 | 1 |  |
+| forerunner 245 | 240 x 240 | 3.0 | 1 | x |
+| forerunner 945 | 240 x 240 | 3.0 | 1 | x |
 | fenix 3 | 218 x 218 | 1.0 | 1 |  |
 | fenix 3 hr | 218 x 218 | 1.0 | 1 |  |
