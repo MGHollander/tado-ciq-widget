@@ -99,8 +99,8 @@ appreciated a lot!
 Support for these devices is requested.
 
 | Device | Screen size | CIQ version | Requests | Supported |
-| --- | --- | ---: | :---: |
-| fenix 6 pro | 260 x 260 | 3.0 | 7 |  |
+| --- | --- | ---: | :---: | --- |
+| fenix 6 pro | 260 x 260 | 3.0 | 7 | x |
 | fenix 6x pro | 280 x 280 | 3.0 | 4 |  |
 | Fenix 6s pro | 240 x 240 | 3.0 | 3 | x |
 | fenix 5 | 240 x 240 | 3.0 | 1 | x |

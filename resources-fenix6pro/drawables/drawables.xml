@@ -1,0 +1,9 @@
+<drawables>
+  <drawable-list id="MainZone2Seperator1">
+    <shape type="rectangle" x="0" y="115" width="fill" height="1" color="Gfx.COLOR_WHITE" />
+  </drawable-list>
+
+  <drawable-list id="MainZone2Seperator2">
+    <shape type="rectangle" x="0" y="200" width="fill" height="1" color="Gfx.COLOR_WHITE" />
+  </drawable-list>
+</drawables>
