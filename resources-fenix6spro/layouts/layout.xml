@@ -83,4 +83,38 @@
         <bitmap id="ZoneIconHumidity" filename="../../resources/images/icon_humidity_black_white_24x24.png" x="71" y="192" dithering="none" />
         <label id="ZoneHumidity" x="99" y="190" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLACK" />
     </layout>
+
+    <layout id="Gcm">
+        <drawable id="TadoHeader" />
+
+        <label x="center" y="80" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.Connect1" />
+        <label x="center" y="115" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.Connect2" />
+        <label x="center" y="150" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.Connect3" />
+    </layout>
+
+    <layout id="LoginLayout">
+        <drawable id="TadoHeader" />
+
+        <label x="center" y="80" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.GoToPhone1" />
+        <label x="center" y="115" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" text="@Strings.GoToPhone2" />
+    </layout>
+
+    <layout id="ErrorLayout">
+        <drawable id="TadoHeader" />
+
+        <label id="ErrorCode" x="center" y="80" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+        <label id="ErrorMessage" x="center" y="115" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    </layout>
+
+    <layout id="ZoneLayout">
+        <drawable id="BackgroundColorWhite" />
+        <drawable id="TadoHeader" />
+
+        <label id="ZoneName" x="center" y="45" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
+        <label id="ZoneTemperature" x="center" y="65" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
+        <label id="ZoneSetting" x="center" y="160" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLACK" />
+
+        <bitmap id="ZoneIconHumidity" filename="../../resources/images/icon_humidity_black_white_24x24.png" x="71" y="192" dithering="none" />
+        <label id="ZoneHumidity" x="99" y="190" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLACK" />
+    </layout>
 </layouts>
