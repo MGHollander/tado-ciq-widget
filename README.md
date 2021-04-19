@@ -80,6 +80,16 @@ BaseUrl in TadoApp.mc to the Expose URL to test.
 - ~Move the app code into a separate dir and move unused images from the app dir
   to a separate dir (possible in Eclipse, but not in VS code).~
 
+## Debugging (for advanced users)
+
+The data field contains a debug option, to set this up follow these steps:
+
+1. Uninstall the data field
+2. Install the data field and turn on the debug option in the settings
+3. Connect the watch with an usb cable to your computer and browse to the folder `\GARMIN\APPS` Remember the most recent name of the PRG file
+4. Browse to the folder `\GARMIN\APPS\LOGS` and create a txt file with the same name as the most recent prg file
+5. After running the data field for a while the txt file should contain debug info about the weather retrieval
+
 ## Feedback
 
 Please feel free to give feedback, share ideas or report bugs.
